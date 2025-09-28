@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Dna, FileText, Settings, User } from "lucide-react";
+import { Dna, Menu } from "lucide-react";
 
 const Navigation = () => {
   return (
@@ -9,7 +8,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo & Title */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
               <Dna className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -19,32 +18,28 @@ const Navigation = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-6">
-            <a href="#upload" className="text-muted-foreground hover:text-foreground transition-colors">
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+              About
+            </a>
+            <a href="#upload" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Upload
             </a>
-            <a href="#analysis" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#analysis" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Analysis
             </a>
-            <a href="#results" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#results" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Results
-            </a>
-            <a href="#docs" className="text-muted-foreground hover:text-foreground transition-colors">
-              Documentation
             </a>
           </div>
 
-          {/* Action Buttons */}
+          {/* Action Button */}
           <div className="flex items-center gap-3">
-            <Badge variant="outline" className="hidden sm:flex">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-              System Online
-            </Badge>
-            <Button variant="outline" size="sm">
-              <Settings className="w-4 h-4" />
+            <Button className="hidden sm:flex">
+              Get Started
             </Button>
-            <Button variant="outline" size="sm">
-              <User className="w-4 h-4" />
+            <Button variant="outline" size="sm" className="md:hidden">
+              <Menu className="w-4 h-4" />
             </Button>
           </div>
         </div>

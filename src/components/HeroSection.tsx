@@ -1,80 +1,67 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Upload, Database, Play, ArrowRight } from "lucide-react";
+import { Upload, Database, Play, ArrowRight, Sparkles } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden">
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    <section className="relative py-24 md:py-32 bg-gradient-to-br from-background via-primary/5 to-accent/5 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl opacity-30"></div>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Header Badge */}
-          <div className="text-center mb-8">
-            <Badge variant="outline" className="px-4 py-2 text-sm font-medium">
-              🧬 Advanced Marine Genomics Platform
-            </Badge>
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Hero Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3 mb-8 shadow-lg">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-foreground text-sm font-semibold">Advanced Marine Genomics Platform</span>
           </div>
 
-          {/* Main Content */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Environmental DNA
-              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Analysis Platform
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto font-light">
-              Advanced machine learning pipeline for marine biodiversity discovery through 
-              environmental DNA sequencing and taxonomic classification.
-            </p>
+          {/* Main Title */}
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-foreground mb-8 leading-[0.9]">
+            Discover Ocean Life
+            <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mt-2">
+              Through DNA
+            </span>
+          </h1>
+          
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-5xl mx-auto font-light leading-relaxed">
+            Revolutionary environmental DNA analysis platform that identifies marine species, 
+            discovers new life forms, and maps ocean biodiversity using cutting-edge AI technology.
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="group">
-                <Upload className="w-5 h-5 mr-2" />
-                Start Analysis
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="group">
-                <Play className="w-4 h-4 mr-2" />
-                View Demo
-              </Button>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
+            <Button size="lg" className="text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
+              <Upload className="w-6 h-6 mr-3" />
+              Start Discovery
+              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6 rounded-xl border-2 hover:bg-primary/5">
+              <Play className="w-5 h-5 mr-3" />
+              Watch Demo
+            </Button>
           </div>
 
-          {/* Feature Grid */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Quick Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
-              {
-                title: "Data Processing",
-                description: "Advanced QC pipeline with automated quality assessment and sequence filtering",
-                icon: Database,
-                stats: "99.7% accuracy"
-              },
-              {
-                title: "ML Classification", 
-                description: "State-of-the-art DNABERT models for taxonomic identification and confidence scoring",
-                icon: Upload,
-                stats: "1M+ species"
-              },
-              {
-                title: "Novel Discovery",
-                description: "Unsupervised clustering algorithms to identify potential new species and variants",
-                icon: Database,
-                stats: "Real-time analysis"
-              }
-            ].map((feature, index) => (
+              { number: "2.4M+", label: "Sequences Analyzed" },
+              { number: "1,200+", label: "Species Identified" },
+              { number: "73", label: "New Discoveries" },
+              { number: "99.7%", label: "Accuracy Rate" }
+            ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center border border-border group-hover:border-primary/20 transition-all duration-300">
-                  <feature.icon className="w-8 h-8 text-primary" />
+                <div className="text-3xl md:text-4xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {stat.number}
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{feature.description}</p>
-                <Badge variant="secondary" className="text-xs">
-                  {feature.stats}
-                </Badge>
+                <div className="text-sm text-muted-foreground font-medium">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
