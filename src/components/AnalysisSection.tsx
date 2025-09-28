@@ -44,15 +44,18 @@ const AnalysisSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-muted/30 to-background">
+    <section id="analysis" className="py-20 px-6 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Analysis & <span className="text-primary">Results</span>
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4">
+            Analysis Pipeline
+          </Badge>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Comprehensive Analysis Dashboard
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Advanced machine learning algorithms process your eDNA data to identify known species,
-            discover novel taxa, and provide comprehensive biodiversity insights.
+          <p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
+            Real-time processing with machine learning classification, unsupervised clustering for novel species discovery, 
+            and comprehensive biodiversity metrics with interactive visualizations.
           </p>
         </div>
 

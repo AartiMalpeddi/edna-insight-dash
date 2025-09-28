@@ -50,21 +50,24 @@ const UploadSection = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/30">
+    <section id="upload" className="py-20 px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Data Upload & <span className="text-primary">Preprocessing</span>
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4">
+            Data Input
+          </Badge>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Upload & Process Your Data
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Upload your environmental DNA sequence files or select from our curated sample datasets
-            to begin your biodiversity analysis journey.
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+            Secure upload for FASTA/FASTQ files with automated quality control and preprocessing. 
+            Start with sample datasets or upload your own environmental DNA sequences.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* File Upload */}
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all duration-300">
+          <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Upload className="w-5 h-5 text-primary" />
@@ -141,7 +144,7 @@ const UploadSection = () => {
           </Card>
 
           {/* Sample Datasets */}
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all duration-300">
+          <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Database className="w-5 h-5 text-secondary" />

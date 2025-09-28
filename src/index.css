@@ -8,49 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Ocean-inspired scientific design system */
-    --background: 210 25% 98%;
-    --foreground: 215 20% 15%;
+    /* Professional scientific design system */
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 225 70% 30%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 225 85% 65%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 60%;
 
-    --secondary: 174 84% 32%;
-    --secondary-foreground: 210 40% 98%;
-    --secondary-glow: 174 65% 55%;
+    --secondary: 210 11% 71%;
+    --secondary-foreground: 210 11% 15%;
+    --secondary-glow: 210 20% 80%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 11% 97%;
+    --muted-foreground: 210 6% 46%;
 
-    --accent: 0 85% 72%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 100%;
     
-    /* Scientific data visualization colors */
-    --chart-1: 225 70% 55%;
-    --chart-2: 174 84% 50%;
-    --chart-3: 0 85% 65%;
-    --chart-4: 280 65% 55%;
-    --chart-5: 45 85% 55%;
+    /* Professional data visualization colors */
+    --chart-1: 210 100% 50%;
+    --chart-2: 200 100% 45%;
+    --chart-3: 180 100% 40%;
+    --chart-4: 160 100% 35%;
+    --chart-5: 140 100% 30%;
     
-    /* Ocean gradients */
-    --gradient-ocean: linear-gradient(135deg, hsl(225, 70%, 30%), hsl(225, 85%, 65%));
-    --gradient-marine: linear-gradient(180deg, hsl(174, 84%, 32%), hsl(174, 65%, 55%));
-    --gradient-depth: linear-gradient(180deg, hsl(225, 70%, 15%), hsl(225, 70%, 30%));
+    /* Clean gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210, 100%, 50%), hsl(210, 100%, 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210, 11%, 99%), hsl(210, 11%, 97%));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(210, 11%, 98%));
     
-    /* Scientific shadows */
-    --shadow-data: 0 10px 30px -10px hsl(225, 70%, 30% / 0.3);
-    --shadow-glow: 0 0 40px hsl(225, 85%, 65% / 0.4);
+    /* Professional shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(210, 11%, 15% / 0.1);
+    --shadow-md: 0 4px 12px 0 hsl(210, 11%, 15% / 0.15);
+    --shadow-lg: 0 10px 25px 0 hsl(210, 11%, 15% / 0.2);
     
     /* Smooth transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-smooth: all 0.2s ease-in-out;
+    --transition-bounce: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
