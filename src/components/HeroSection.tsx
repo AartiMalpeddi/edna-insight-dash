@@ -27,9 +27,9 @@ const HeroSection = () => {
 
           {/* Main Title */}
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-8 leading-[0.9]">
-            HydroTrace
+            Discover Ocean Life
             <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mt-2">
-              Tracing Species Through Water DNA
+              Through DNA
             </span>
           </h1>
           
