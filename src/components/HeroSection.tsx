@@ -1,15 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Upload, Database, Play, ArrowRight, Sparkles } from "lucide-react";
+import oceanBackground from "@/assets/ocean-background.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-br from-background via-primary/5 to-accent/5 overflow-hidden">
-      {/* Background Effects */}
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      {/* Ocean Background */}
       <div className="absolute inset-0">
+        <img 
+          src={oceanBackground} 
+          alt="Ocean water background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-primary/20 to-accent/30"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl opacity-30"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -21,15 +26,15 @@ const HeroSection = () => {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-foreground mb-8 leading-[0.9]">
-            Discover Ocean Life
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-8 leading-[0.9]">
+            HydroTrace
             <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mt-2">
-              Through DNA
+              Tracing Species Through Water DNA
             </span>
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-5xl mx-auto font-light leading-relaxed">
+          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 max-w-5xl mx-auto font-light leading-relaxed">
             Revolutionary environmental DNA analysis platform that identifies marine species, 
             discovers new life forms, and maps ocean biodiversity using cutting-edge AI technology.
           </p>
@@ -56,10 +61,10 @@ const HeroSection = () => {
               { number: "99.7%", label: "Accuracy Rate" }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="text-3xl md:text-4xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
                   {stat.number}
                 </div>
-                <div className="text-sm text-muted-foreground font-medium">
+                <div className="text-sm text-white/80 font-medium">
                   {stat.label}
                 </div>
               </div>
