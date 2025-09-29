@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Upload, Database, Play, ArrowRight, Sparkles } from "lucide-react";
-import coolOceanBackground from "@/assets/cool-ocean-background.jpg";
+import aquaMarbleTexture from "@/assets/aqua-marble-texture.jpg";
 
 const HeroSection = () => {
   return (
@@ -9,8 +9,8 @@ const HeroSection = () => {
       {/* Ocean Background */}
       <div className="absolute inset-0">
         <img 
-          src={coolOceanBackground} 
-          alt="Ocean water background" 
+          src={aquaMarbleTexture} 
+          alt="Aqua marine marble texture background" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-primary/20 to-accent/30"></div>
